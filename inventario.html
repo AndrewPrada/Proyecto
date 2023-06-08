@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Design by foolishdeveloper.com -->
+  <title>Glassmorphism login Form Tutorial in html css</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <!--Stylesheet-->
+  <style media="screen">
+    *,
+    *:before,
+    *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #d6d6d6;
+    }
+
+    .background {
+      width: 430px;
+      height: 520px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+
+    .background .shape {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .shape:first-child {
+      background: linear-gradient(#1845ad,
+          #23a2f6);
+      left: -80%;
+      top: -80px;
+    }
+
+    .shape:last-child {
+      background: linear-gradient(to right,
+          #ff512f,
+          #f09819);
+      right: -80%;
+      bottom: -80px;
+    }
+
+    .container {
+      font-family: 'Poppins', sans-serif;
+      width: 80%;
+      height: 520px;
+      width: 80%;
+      background-color: rgba(231, 231, 231, 0.473);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+      padding: 50px 35px;
+    }
+
+    h1{
+      margin: 10px 0;
+    }
+
+    table {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    table tr td {
+      border: 1px solid #5e5e5e;
+      padding: 0 10px;
+    }
+
+    table tr th {
+      text-align: left;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #080710;
+      padding: 15px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <div class="container">
+    <h1>Inventario</h1>
+    <table>
+      <thead>
+        <tr>
+          <th width="50">CBN</th>
+          <th width="350">Item</th>
+          <th width="100">Tipo</th>
+          <th width="100">Cantidad</th>
+          <th width="250">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>514</td>
+          <td>Monitor AOC 27"</td>
+          <td>Periferico</td>
+          <td>5</td>
+          <td>
+            <button class="btn">Ver</button>
+            <button class="btn">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>126</td>
+          <td>Computadora de escritorio I7, 8GB Ram</td>
+          <td>Computador</td>
+          <td>2</td>
+          <td>
+            <button class="btn">Ver</button>
+            <button class="btn">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>635</td>
+          <td>Mouse inalambrico Logitech</td>
+          <td>Periferico</td>
+          <td>22</td>
+          <td>
+            <button class="btn">Ver</button>
+            <button class="btn">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>106</td>
+          <td>Mouse alambrico Logitech</td>
+          <td>Periferico</td>
+          <td>4</td>
+          <td>
+            <button class="btn">Ver</button>
+            <button class="btn">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>643</td>
+          <td>Teclado Logitech</td>
+          <td>Periferico</td>
+          <td>42</td>
+          <td>
+            <button class="btn">Ver</button>
+            <button class="btn">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>643</td>
+          <td>Laptop Toshiba 13", I3, 4GB Ram</td>
+          <td>Periferico</td>
+          <td>2</td>
+          <td>
+            <button class="btn">Ver</button>
+            <button class="btn">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
