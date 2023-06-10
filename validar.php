@@ -9,18 +9,16 @@
     if ($username === 'jorge' && $password === "123"){
         header("Location: inventario.html");
         die;
-    }
-    else if ($username === 'orlenys' && $password === "234"){
+    }else if ($username === 'orlenys' && $password === "234"){
         header("Location: inventario.html");
         die;
-    }
-    else if ($username === 'Andrew' && $password === '567'){
+    }else if ($username === 'Andrew' && $password === '567'){
         header("Location: inventario.html");
+        die;
+    }else if ($username === 'jose' && $password === "334"){
+        header("Location: inventario.html");
+        die;
     }else{
-    } else if ($username === 'jose' && $password === "334"){
-        header("Location: inventario.html");
-        die;
-    } else{
         header("Location: login.html");
         die;
     }
