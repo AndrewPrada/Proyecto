@@ -9,8 +9,15 @@
     if ($username === 'jorge' && $password === "123"){
         header("Location: inventario.html");
         die;
+    }
+    else if ($username === 'orlenys' && $password === "234"){
+        header("Location: inventario.html");
+        die;
+
     } else{
         header("Location: login.html");
         die;
     }
+    
+
 ?>
