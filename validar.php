@@ -13,11 +13,14 @@
     else if ($username === 'orlenys' && $password === "234"){
         header("Location: inventario.html");
         die;
-
     }
     else if ($username === 'Andrew' && $password === '567'){
         header("Location: inventario.html");
     }else{
+    } else if ($username === 'jose' && $password === "334"){
+        header("Location: inventario.html");
+        die;
+    } else{
         header("Location: login.html");
         die;
     }
