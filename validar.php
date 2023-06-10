@@ -5,10 +5,11 @@
     echo nl2br("username $username \n");
     echo nl2br("password $password");
 
-    if ($username === 'admin' && $password === "123"){
+
+    if ($username === 'jorge' && $password === "123"){
         header("Location: inventario.html");
         die;
-    } else {
+    } else{
         header("Location: login.html");
         die;
     }
