@@ -14,6 +14,8 @@
         header("Location: inventario.html");
     }else if ($username === 'jose' && $password === "334"){
         header("Location: inventario.html");
+    }else if ($username === 'frank' && $password === "789"){
+        header("Location: inventario.html");
     }else{
         header("Location: login.html");
     }
