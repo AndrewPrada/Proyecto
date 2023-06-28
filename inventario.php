@@ -1,3 +1,13 @@
+<?php
+  session_start();
+
+  // chequeamos la sesion, si el usuario NO esta logeado, se retgorna al login
+  if (!$_SESSION['usuario_logeado']){
+    header("Location: login.php");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +27,9 @@
     <div class="shape"></div>
   </div>
   <div class="container">
+    <div class="header">
+      <div><a href="logout.php">Cerrar sesion</a></div>
+    </div>
     <h1>Inventario</h1>
     <table>
       <thead>

@@ -1,22 +1,28 @@
 <?php
+    // estos son los datos de la base de datos
+    $DATABASE = "laboratorio";
+    $USER_DATABASE = "postgres";
+    $USER_PASSWORD = "jorge31588";
+
+    // coneccion a la base de datos
+    $dbconn2 = pg_connect("host=localhost port=5432 dbname=$DATABASE user=$USER_DATABASE password=$USER_PASSWORD");
+
+    // variables envaidas por el usuario
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    echo nl2br("username $username \n");
-    echo nl2br("password $password");
+    // hacemos la query para tomar el usuario de la base de datos
+    $pgResult = pg_query($dbconn2, "SELECT * FROM public.usuarios WHERE usuario = '".$username."'");
 
+    // convertimos el resultado a un objeto de php (stdClass)
+    $usuario = pg_fetch_object($pgResult);
 
-    if ($username === 'jorge' && $password === "123"){
-        header("Location: inventario.html");
-    }else if ($username === 'orlenys' && $password === "234"){
-        header("Location: inventario.html");
-    }else if ($username === 'Andrew' && $password === '567'){
-        header("Location: inventario.html");
-    }else if ($username === 'jose' && $password === "334"){
-        header("Location: inventario.html");
-    }else if ($username === 'frank' && $password === "789"){
-        header("Location: inventario.html");
-    }else{
-        header("Location: login.html");
+    // comparamos la clave enviada por el usuario con la guardada en la base de datos
+    if ($usuario->clave === $password) { 
+        session_start(); 
+        $_SESSION['usuario_logeado'] = $usuario->id;
+        header("Location: inventario.php");
+    } else {
+        header("Location: login.php");
     }
 ?>
