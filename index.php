@@ -18,7 +18,7 @@
         <div class="shape"></div>
     </div>
     <form method="post" action="/proyecto/validar.php">
-        <h3>Login Here</h3>
+        <h3>Inicio de Sesión</h3>
 
         <label for="username">Usuario</label>
         <input type="text" placeholder="Usuario" id="username" name="username">
