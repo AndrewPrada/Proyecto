@@ -33,6 +33,6 @@ if ($error){
 } else{
     // se ejecuta la query que crea el usuario en base de datos
     $pgResult = pg_query($dbconn2, "INSERT INTO public.usuarios (usuario, clave) values('".$username."', '".$password."')");
-    header("Location: login.php?exito=Se creo el usuario exitosamente");
+    header("Location: index.php?exito=Se creo el usuario exitosamente");
 }
 ?>

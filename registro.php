@@ -4,12 +4,12 @@
 <head>
     <!-- Design by foolishdeveloper.com -->
     <title>Glassmorphism login Form Tutorial in html css</title>
-
+    <link href="css/normalize.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     </style>
 </head>
 
@@ -18,7 +18,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form method="post" action="/laboratorio-2/validar-registro.php">
+    <form method="post" action="/proyecto/validar-registro.php">
         <h3>Register</h3>
 
         <label for="username">Username</label>

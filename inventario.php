@@ -3,7 +3,7 @@
 
   // chequeamos la sesion, si el usuario NO esta logeado, se retgorna al login
   if (!$_SESSION['usuario_logeado']){
-    header("Location: login.php?error=Debes estar logeado para acceder a esta pagina");
+    header("Location: index.php?error=Debes estar logeado para acceder a esta pagina");
   }
 
   // estos son los datos de la base de datos
@@ -28,12 +28,12 @@
 
 <head>
   <!-- Design by foolishdeveloper.com -->
-  <title>Glassmorphism login Form Tutorial in html css</title>
-
+  <title>Sistema de Inventario</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   <!--Stylesheet-->
-  <link href="styles.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>

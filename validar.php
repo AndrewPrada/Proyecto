@@ -23,6 +23,6 @@
         $_SESSION['usuario_logeado'] = $usuario->id;
         header("Location: inventario.php");
     } else {
-        header("Location: login.php?error=La clave ingresada es incorrecta");
+        header("Location: index.php?error=La clave ingresada es incorrecta");
     }
 ?>
