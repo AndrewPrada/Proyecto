@@ -7,7 +7,7 @@
     // coneccion a la base de datos
     $dbconn2 = pg_connect("host=localhost port=5432 dbname=$DATABASE user=$USER_DATABASE password=$USER_PASSWORD");
 
-    // variables envaidas por el usuario
+    // variables enviadas por el usuario
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -23,6 +23,6 @@
         $_SESSION['usuario_logeado'] = $usuario->id;
         header("Location: inventario.php");
     } else {
-        header("Location: login.php");
+        header("Location: login.php?error=La clave ingresada es incorrecta");
     }
 ?>

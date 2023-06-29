@@ -3,9 +3,24 @@
 
   // chequeamos la sesion, si el usuario NO esta logeado, se retgorna al login
   if (!$_SESSION['usuario_logeado']){
-    header("Location: login.php");
+    header("Location: login.php?error=Debes estar logeado para acceder a esta pagina");
   }
 
+  // estos son los datos de la base de datos
+  $DATABASE = "laboratorio";
+  $USER_DATABASE = "postgres";
+  $USER_PASSWORD = "jorge31588";
+
+  // coneccion a la base de datos
+  $dbconn2 = pg_connect("host=localhost port=5432 dbname=$DATABASE user=$USER_DATABASE password=$USER_PASSWORD");
+
+  // hacemos la query para tomar el usuario de la base de datos
+  $pgResult = pg_query($dbconn2, "SELECT * FROM public.usuarios WHERE id = '".$_SESSION['usuario_logeado']."'");
+
+  // convertimos el resultado a un objeto de php (stdClass)
+  $usuario = pg_fetch_object($pgResult);
+
+  $username = $usuario->usuario;
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +43,9 @@
   </div>
   <div class="container">
     <div class="header">
+      <div>
+        Hola, <?php echo($username) ?>
+      </div>
       <div><a href="logout.php">Cerrar sesion</a></div>
     </div>
     <h1>Inventario</h1>

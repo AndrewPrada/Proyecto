@@ -15,6 +15,10 @@ body {
     justify-content: end;
 }
 
+.header div{
+    padding-right: 30px;
+}
+
 .background {
     width: 430px;
     height: 520px;
