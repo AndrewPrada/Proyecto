@@ -1,8 +1,5 @@
 <?php
-    // estos son los datos de la base de datos
-    $DATABASE = "laboratorio";
-    $USER_DATABASE = "postgres";
-    $USER_PASSWORD = "Avp1907.";
+    require_once('variables.php');
 
     // coneccion a la base de datos
     $dbconn2 = pg_connect("host=localhost port=5432 dbname=$DATABASE user=$USER_DATABASE password=$USER_PASSWORD");
