@@ -53,7 +53,6 @@
     <table>
       <thead>
         <tr>
-          <th width="50">CBN</th>
           <th width="350">Item</th>
           <th width="100">Tipo</th>
           <th width="100">Cantidad</th>
@@ -65,12 +64,11 @@
           foreach ($inventario as $i => $equipo) {
         ?>
             <tr>
-              <td> <?php echo $equipo['cbn'] ?> </td>
               <td> <?php echo $equipo['equipo'] ?> </td>
               <td> <?php echo $equipo['tipo'] ?> </td>
               <td> <?php echo $equipo['cantidad'] ?> </td>
               <td>
-                <button class="btn">Ver</button>
+                <a class="btn" href="ver-equipo.php?idEquipo=<?php echo $equipo['id'] ?>">Ver</button>
                 <button class="btn">Eliminar</button>
               </td>
             </tr>
