@@ -17,6 +17,11 @@
   $usuario = pg_fetch_object($pgResult);
 
   $username = $usuario->usuario;
+
+  $inventarioResult = pg_query($dbconn2, "SELECT * FROM public.inventario");
+
+  $inventario = pg_fetch_all($inventarioResult);
+
 ?>
 
 <!DOCTYPE html>
@@ -56,66 +61,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>514</td>
-          <td>Monitor AOC 27"</td>
-          <td>Periferico</td>
-          <td>5</td>
-          <td>
-            <button class="btn">Ver</button>
-            <button class="btn">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>126</td>
-          <td>Computadora de escritorio I7, 8GB Ram</td>
-          <td>Computador</td>
-          <td>2</td>
-          <td>
-            <button class="btn">Ver</button>
-            <button class="btn">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>635</td>
-          <td>Mouse inalambrico Logitech</td>
-          <td>Periferico</td>
-          <td>22</td>
-          <td>
-            <button class="btn">Ver</button>
-            <button class="btn">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>106</td>
-          <td>Mouse alambrico Logitech</td>
-          <td>Periferico</td>
-          <td>4</td>
-          <td>
-            <button class="btn">Ver</button>
-            <button class="btn">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>643</td>
-          <td>Teclado Logitech</td>
-          <td>Periferico</td>
-          <td>42</td>
-          <td>
-            <button class="btn">Ver</button>
-            <button class="btn">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>643</td>
-          <td>Laptop Toshiba 13", I3, 4GB Ram</td>
-          <td>Periferico</td>
-          <td>2</td>
-          <td>
-            <button class="btn">Ver</button>
-            <button class="btn">Eliminar</button>
-          </td>
-        </tr>
+        <?php 
+          foreach ($inventario as $i => $equipo) {
+        ?>
+            <tr>
+              <td> <?php echo $equipo['cbn'] ?> </td>
+              <td> <?php echo $equipo['equipo'] ?> </td>
+              <td> <?php echo $equipo['tipo'] ?> </td>
+              <td> <?php echo $equipo['cantidad'] ?> </td>
+              <td>
+                <button class="btn">Ver</button>
+                <button class="btn">Eliminar</button>
+              </td>
+            </tr>
+        <?php 
+          }
+        ?>
       </tbody>
     </table>
   </div>
