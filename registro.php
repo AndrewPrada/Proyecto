@@ -25,10 +25,10 @@
         <input type="text" placeholder="Usuario" id="username" name="username">
 
         <label for="password">Contraseña</label>
-        <input type="text" placeholder="Contraseña" id="password" name="password">
+        <input type="password" placeholder="Contraseña" id="password" name="password">
 
         <label for="confirm_password">Confirmar Contraseña</label>
-        <input type="text" placeholder="Confirmar Contraseña" id="confirm_password" name="confirm_password">
+        <input type="password" placeholder="Confirmar Contraseña" id="confirm_password" name="confirm_password">
 
         <input type="submit" value="Enviar" />
         <div id="respuesta" class="error-response">
