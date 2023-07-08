@@ -1,8 +1,8 @@
 <?php
 session_start();
- 
+
 // destrumos la sesion del usuario
- 
+
 unset($_SESSION);
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();

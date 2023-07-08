@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Design by foolishdeveloper.com -->
-    <title>Glassmorphism login Form Tutorial in html css</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link  rel="stylesheet" href="CSS/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <link href="css/styles.css" rel="stylesheet">
-    </style>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
-
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <form method="post" action="/proyecto/validar-registro.php">
-        <h3>Registro de Cuenta</h3>
+    <form class="form__register" method="post" action="/registro/validar-registro.php">
+        <h4>Formulario de Registro</h4>
+        <input class="controls" type="text" name="username" id="username" placeholder="Ingrese su Nombre de Usuario">
+        <input class="controls" type="password" name="password" id="password" placeholder="Ingrese una Contraseña">
+        <input class="controls" type="password" name="confirm_password" id="confirm_password" placeholder="Confirme la contraseña">
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <input class="btn" type="submit" value="Registrar">
 
-        <label for="username">Usuario</label>
-        <input type="text" placeholder="Usuario" id="username" name="username">
+        <p><a href="index.php">¿Ya tienes una Cuenta?</a></p>
 
-        <label for="password">Contraseña</label>
-        <input type="password" placeholder="Contraseña" id="password" name="password">
-
-        <label for="confirm_password">Confirmar Contraseña</label>
-        <input type="password" placeholder="Confirmar Contraseña" id="confirm_password" name="confirm_password">
-
-        <input type="submit" value="Enviar" />
         <div id="respuesta" class="error-response">
             <?php
                 if (isset($_GET['error'])){
@@ -40,7 +31,4 @@
         </div>
     </form>
 </body>
-
-<script src="script.js"></script>
-
 </html>
